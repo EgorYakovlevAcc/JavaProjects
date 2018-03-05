@@ -1,2 +1,2 @@
-# Sapper
-Sapper game. Java project
+# NoteMaker
+Java project
