@@ -4,16 +4,22 @@ package Sapper.sapperJava;
 import java.awt.*;
 
 public class Game {
+    //взаимодействие объектов игры, правила, выполнение
 
     private Bomb bomb;
     private Flag flag;
     private GameState state;
 
+    //классы игра
     public Game(int cols, int rows, int bombs) {
+        //устанавливаем размеры поля
         Ranges.setSize(new Coord (cols, rows));
+        //создаём объект бомба и вызываем методы конструктора
         bomb = new Bomb(bombs);
+        //создаём объект флаг и вызываем методы конструктора
         flag = new Flag();
     }
+
     public sapper getSapper (Coord coord) {
         if (flag.get(coord) == sapper.OPENED)
             return bomb.get(coord);
